@@ -17,7 +17,7 @@ export async function POST(_: NextRequest, { params }: Params) {
 
   const liked = post.likes.map(String).includes(userId);
   if (liked) {
-    post.likes = post.likes.filter((id) => id.toString() !== userId);
+    post.likes = post.likes.filter((id: any) => id.toString() !== userId);
   } else {
     post.likes.push(userId);
   }
