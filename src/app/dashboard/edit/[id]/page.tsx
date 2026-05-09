@@ -3,7 +3,7 @@ import { redirect, notFound } from "next/navigation";
 import Link from "next/link";
 import { connectDB } from "@/lib/db";
 import { Post } from "@/models/Post";
-import { authOptions } from "../../../api/auth/[...nextauth]/route";
+import { authOptions } from "@/lib/auth";
 import PostForm from "@/components/PostForm";
 
 export default async function EditPostPage({ params }: { params: { id: string } }) {

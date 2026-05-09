@@ -8,7 +8,7 @@ import "@/models/User";
 import LikeButton from "@/components/LikeButton";
 import CommentSection from "@/components/CommentSection";
 import { getServerSession } from "next-auth";
-import { authOptions } from "../../api/auth/[...nextauth]/route";
+import { authOptions } from "@/lib/auth";
 
 export default async function BlogPostPage({ params }: { params: { slug: string } }) {
   await connectDB();

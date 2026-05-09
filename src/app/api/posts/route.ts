@@ -3,7 +3,7 @@ import { getServerSession } from "next-auth";
 import slugify from "slugify";
 import { connectDB } from "@/lib/db";
 import { Post } from "@/models/Post";
-import { authOptions } from "../auth/[...nextauth]/route";
+import { authOptions } from "@/lib/auth";
 
 export async function GET(req: NextRequest) {
   await connectDB();

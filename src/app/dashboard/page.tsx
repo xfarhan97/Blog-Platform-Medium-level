@@ -5,7 +5,7 @@ import Image from "next/image";
 import { connectDB } from "@/lib/db";
 import { Post } from "@/models/Post";
 import "@/models/User";
-import { authOptions } from "../api/auth/[...nextauth]/route";
+import { authOptions } from "@/lib/auth";
 import DeletePostButton from "@/components/DeletePostButton";
 
 export default async function DashboardPage() {
